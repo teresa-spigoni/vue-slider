@@ -15,19 +15,16 @@
         <div class="container">
           <div class="slider-wrapper">
             <div class="prev">
-              <i class="fas fa-angle-left" @click="prev"></i>
+              <i class="fas fa-angle-left" @click="prev" v-on:keyup.enter="prev"></i>
             </div>
             <div class="images">
-              <img :src="image[imageIndex]" alt="">
+              <img :src="images[imageIndex]" alt="">
             </div>
             <div class="next">
               <i class="fas fa-angle-right" @click="next"></i>
             </div>
             <div class="nav">
-              <i class="fas fa-circle active first"></i>
-              <i class="fas fa-circle"></i>
-              <i class="fas fa-circle"></i>
-              <i class="fas fa-circle last"></i>
+              <i v-for="(item, index) in images" :class="{active: activeDot(index)}" class="fas fa-circle"></i>
             </div>
           </div>
         </div>

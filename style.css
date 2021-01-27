@@ -23,9 +23,6 @@
 .slider-wrapper .images img {
     height: 100%;
 }
-.slider-wrapper .images img.active {
-    display: inline-block;
-}
 .prev, .next {
     position: absolute;
     color: #565a5c;
