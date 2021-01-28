@@ -26,6 +26,9 @@ new Vue({
     },
     activeDot: function(index) {
       return index === this.imageIndex;
+    },
+    change: function(index) {
+      this.imageIndex = index;
     }
   }
 });

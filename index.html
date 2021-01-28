@@ -24,7 +24,7 @@
               <i class="fas fa-angle-right" @click="next"></i>
             </div>
             <div class="nav">
-              <i v-for="(item, index) in images" :class="{active: activeDot(index)}" class="fas fa-circle"></i>
+              <i v-for="(item, index) in images" :class="{fas: true, 'fa-circle': true, active: activeDot(index)}" @click="change(index)"></i>
             </div>
           </div>
         </div>
